@@ -41,7 +41,7 @@
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Administracion!</h1>
                                     </div>
                                     <form class="user" method="POST" action="{{ route('login') }}">
                                         {{ csrf_field() }}
@@ -52,6 +52,9 @@
                                                 placeholder="Enter Email Address..."
                                                 name="email" value="{{ old('email') }}" required autofocus>
                                             @if ($errors->has('email'))
+                                                <script>
+                                                    alert("pico");
+                                                </script>
                                                 <span class="help-block">
                                                     <strong>{{ $errors->first('email') }}</strong>
                                                 </span>
@@ -71,22 +74,21 @@
                                             <div class="custom-control custom-checkbox small">
                                                 <input type="checkbox" class="custom-control-input" id="customCheck">
                                                 <label class="custom-control-label" for="customCheck"
-                                                name="remember" {{ old('remember') ? 'checked' : '' }}>Remember
-                                                    Me</label>
+                                                name="remember" {{ old('remember') ? 'checked' : '' }}>Recuerdame</label>
                                             </div>
                                         </div>
                                         <button type="submit" class="tn btn-primary btn-user btn-block">
-                                            Login
-                                        </button>
-                                        <a href="index.html" class="btn btn-primary btn-user btn-block">
                                             Entrar
-                                        </a>
+                                        </button>
+                                    <!--     <a href="index.html" class="btn btn-primary btn-user btn-block">
+                                            Entrar
+                                        </a> -->
                                         <hr>
                                         <a href="index.html" class="btn btn-google btn-user btn-block">
-                                            <i class="fab fa-google fa-fw"></i> Login with Google
+                                            <i class="fab fa-google fa-fw"></i> Login con Google
                                         </a>
                                         <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                                            <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
+                                            <i class="fab fa-facebook-f fa-fw"></i> Login con Facebook
                                         </a>
                                     </form>
                                     <hr>
@@ -94,7 +96,7 @@
                                         <a class="small" href="forgot-password.html">Forgot Password?</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="register.html">Create an Account!</a>
+                                        <a class="small" href="register.html">Crear una Cuenta!</a>
                                     </div>
                                 </div>
                             </div>
